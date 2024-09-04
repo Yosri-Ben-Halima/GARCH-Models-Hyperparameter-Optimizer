@@ -1,7 +1,7 @@
 import unittest
 import pandas as pd
 import numpy as np
-from garch_optimizer.garch_optimizer import garch_parameter
+import garch_optimizer as go
 
 class TestGARCHParameter(unittest.TestCase):
     def setUp(self):
@@ -11,7 +11,7 @@ class TestGARCHParameter(unittest.TestCase):
         
     def test_garch_parameter(self):
         # Test the function with default parameters
-        best_params = garch_parameter(self.data, max_p=3, max_q=3, n_trials=10)
+        best_params = go.garch_parameter(self.data, max_p=3, max_q=3, n_trials=10)
         self.assertIsInstance(best_params, dict)
         self.assertIn('p', best_params)
         self.assertIn('q', best_params)

@@ -12,25 +12,38 @@ def garch_parameter(data, max_p, max_q, max_o=0, max_lag=0, vol=None, n_trials=2
     """
     Perform hyperparameter optimization for GARCH model parameters using Optuna.
 
-    Parameters:
-    - data (array-like): The input data for the GARCH model.
-    - max_p (int): Maximum value for the GARCH(p, q, o) model's p parameter.
-    - max_q (int): Maximum value for the GARCH(p, q, o) model's q parameter.
-    - max_o (int, optional): Maximum value for the GARCH(p, q, o) model's o parameter. Defaults to 0.
-    - max_lag (int, optional): Maximum value for the GARCH(p, q, o) model's lags parameter. Defaults to 0.
-    - vol (str or list, optional): Specification of the volatility model. If None, the model will be optimized among
-      'arch', 'garch', and 'egarch'. If it is a string, the provided volatility model will be used. If it is a list,
-      the volatility model will be selected from the provided list of models. Defaults to None.
-    - n_trials (int, optional): Number of optimization trials to perform. Defaults to 200.
-    - x (array-like, optional): The exogenous variable for the GARCH model. Defaults to None. Ignored if the model does not permit exogenous regressors.
+    Parameters
+    -----------
 
-    Returns:
-    - dict: Best parameters found during the optimization.
+    - data: array-like
+        The input data for the GARCH model.
+    - max_p: int 
+        Maximum value for the GARCH(p, q, o) model's p parameter.
+    - max_q: int 
+        Maximum value for the GARCH(p, q, o) model's q parameter.
+    - max_o: int, optional 
+        Maximum value for the GARCH(p, q, o) model's o parameter. Defaults to 0.
+    - max_lag: int, optional 
+        Maximum value for the GARCH(p, q, o) model's lags parameter. Defaults to 0.
+    - vol: str or list, optional
+        Specification of the volatility model. If None, the model will be optimized among 'arch', 'garch', and 'egarch'. If it is a string, the provided volatility model will be used. If it is a list, the volatility model will be selected from the provided list of models. Defaults to None.
+    - n_trials: int, optional 
+        Number of optimization trials to perform. Defaults to 200.
+    - x: array-like, optional
+        The exogenous variable for the GARCH model. Defaults to None. Ignored if the model does not permit exogenous regressors.
 
-    Raises:
-    - LinAlgError: If a LinAlgError occurs during the optimization process.
-    - RuntimeWarning: If a RuntimeWarning occurs during the optimization process.
-    - ConvergenceWarning: If a ConvergenceWarning occurs during the optimization process.
+    Returns
+    -------
+
+    - best_params: dict
+        Best parameters found during the optimization.
+
+    Raises
+    ------
+
+    - `LinAlgError`: If a LinAlgError occurs during the optimization process.
+    - `RuntimeWarning`: If a RuntimeWarning occurs during the optimization process.
+    - `ConvergenceWarning`: If a ConvergenceWarning occurs during the optimization process.
     """
     def objective(trial):
         """
