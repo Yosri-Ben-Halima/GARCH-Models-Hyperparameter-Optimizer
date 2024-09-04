@@ -1,85 +1,54 @@
-   # GARCH Hyperparameter Optimization
+# GARCH Hyperparameter Optimization
 
-   This project provides a GARCH hyperparameter grid search optimizer using Optuna.
+This project provides a GARCH hyperparameter grid search optimizer using Optuna.
 
-   ## Installation
+## Installation
 
-   Ensure you have the necessary packages installed. You can install them using pip:
+Ensure you have the necessary packages installed. You can install them using pip:
 
-   ```bash
-   pip install -r requirements.txt
-   ```
+```bash
+pip install -r requirements.txt
+```
 
-   ## Usage
+## Usage
 
-   Import the `garch_parameter` function from the `garch_optimizer` module and use it to find the best GARCH model parameters:
+Import the `garch_parameter` function from the `garch_optimizer` module and use it to find the best GARCH model parameters:
 
-   ```python
-   from garch_optimizer.garch_optimizer import garch_parameter
+```python
+from garch_optimizer.garch_optimizer import garch_parameter
 
-   # Sample data for testing
-   import pandas as pd
-   import numpy as np
-   np.random.seed(42)
-   data = pd.Series(np.random.randn(100))
+# Sample data for testing
+import pandas as pd
+import numpy as np
+np.random.seed(42)
+data = pd.Series(np.random.randn(100))
 
-   best_params = garch_parameter(data, max_p=3, max_q=3, n_trials=200)
-   print(best_params)
-   ```
+best_params = garch_parameter(data, max_p=3, max_q=3, n_trials=200)
+print(best_params)
+```
 
-   ## Testing
+## Testing
 
-   To run the tests, use the following command:
+To run the tests, use the following command:
 
-   ```bash
-   python -m unittest discover
-   ```
+```bash
+python -m unittest discover
+```
 
-   ## License
+## Contributing
 
-   This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+Feel free to submit issues or pull requests to enhance the project.
 
-   **`requirements.txt`**:
-   ```
-   optuna
-   pandas
-   numpy
-   arch
-   scikit-learn
-   ```
+## License
 
-   **`setup.py`**:
-   ```python
-   from setuptools import setup, find_packages
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-   setup(
-       name='garch_optimizer',
-       version='0.1',
-       packages=find_packages(),
-       install_requires=[
-           'optuna',
-           'pandas',
-           'numpy',
-           'arch',
-           'scikit-learn',
-       ],
-       tests_require=[
-           'unittest',
-       ],
-       description='GARCH Hyperparameter Grid Search Optimizer using Optuna',
-       author='Your Name',
-       author_email='your.email@example.com',
-       url='https://github.com/yourusername/garch_optimizer',
-   )
-   ```
+## Contact
 
-### Summary:
-- **`garch_optimizer/`**: Contains the main code for the project.
-- **`tests/`**: Contains unit tests for the project.
-- **`README.md`**: Provides an overview and usage instructions.
--
+Thank you for visiting my GitHub profile! Feel free to reach out if you have any questions or opportunities to collaborate. Let's connect and explore new possibilities together!
 
- **`requirements.txt`**: Lists the project dependencies.
-- **`setup.py`**: Allows installation of the package and its dependencies.
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Yosri%20Ben%20Halima-blue)](https://www.linkedin.com/in/yosri-ben-halima-3553a9221/)
+[![Twitter](https://img.shields.io/badge/Facebook-@Yosry%20Ben%20Hlima-navy)](https://www.facebook.com/NottherealYxsry)
+[![Instagram](https://img.shields.io/badge/Instagram-@yosrybh-orange)](https://www.instagram.com/yosrybh/)
+[![Email](https://img.shields.io/badge/Email-yosri.benhalima@ept.ucar.tn-white)](yosri.benhalima@ept.ucar.tn)
 
-This setup follows PEP8 guidelines and provides a clean and organized project structure.
