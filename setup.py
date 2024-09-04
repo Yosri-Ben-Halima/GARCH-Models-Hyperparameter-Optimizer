@@ -15,7 +15,7 @@ setup(
         'unittest',
     ],
     description='GARCH Hyperparameter Grid Search Optimizer using Optuna',
-    author='Your Name',
-    author_email='your.email@example.com',
-    url='https://github.com/yourusername/garch_optimizer',
+    author='Yosri Ben Halima',
+    author_email='yosri.benhalima@ept.ucar.tn',
+    url='https://github.com/Yosri-Ben-Halima/GARCH-Models-Hyperparameter-Optimize',
 )
