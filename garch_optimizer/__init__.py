@@ -1,0 +1,3 @@
+"""
+garch_optimizer package.
+"""
