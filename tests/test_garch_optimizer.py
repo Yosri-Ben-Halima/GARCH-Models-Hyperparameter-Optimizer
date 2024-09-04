@@ -1,7 +1,7 @@
 import unittest
 import pandas as pd
 import numpy as np
-import garch_optimizer as go
+import garch_optimizer.garch_optimizer as go
 
 class TestGARCHParameter(unittest.TestCase):
     def setUp(self):
