@@ -5,8 +5,9 @@ import logging
 import time
 from arch import arch_model
 from sklearn.metrics import mean_absolute_percentage_error
+from sklearn.exceptions import ConvergenceWarning
 from scipy.linalg import LinAlgError
-from warnings import RuntimeWarning, ConvergenceWarning
+import warnings
 
 def garch_parameter(data, max_p, max_q, max_o=0, max_lag=0, vol=None, n_trials=200, x=None):
     """
