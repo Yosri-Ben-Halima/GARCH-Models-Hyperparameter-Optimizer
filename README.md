@@ -23,7 +23,13 @@ import numpy as np
 np.random.seed(42)
 data = pd.Series(np.random.randn(100))
 
-best_params = garch_parameter(data, max_p=3, max_q=3, n_trials=200)
+best_params = garch_parameter(
+        data=data, 
+        max_p=3, 
+        max_q=3, 
+        n_trials=200
+    )
+
 print(best_params)
 ```
 
