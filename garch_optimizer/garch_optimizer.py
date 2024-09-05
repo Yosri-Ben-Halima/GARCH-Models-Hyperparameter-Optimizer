@@ -8,8 +8,9 @@ from sklearn.metrics import mean_absolute_percentage_error
 from sklearn.exceptions import ConvergenceWarning
 from scipy.linalg import LinAlgError
 import warnings
+from typing import Literal, Optional
 
-def garch_parameter(data, max_p, max_q, max_o=0, max_lag=0, vol=None, n_trials=200, x=None):
+def garch_parameter(data: pd.Series, max_p: int, max_q: int, max_o: int=0, max_lag: int=0, vol: str=None, n_trials: int=200, x=None) -> dict:
     """
     Perform hyperparameter optimization for GARCH model parameters using Optuna.
 
