@@ -23,6 +23,13 @@ GARCH-Models-Hyperparameter-Optimizer/
 └── README.md
 
 ```
+- **`garch_optimizer/`**: Contains the main code for GARCH hyperparameter optimization. The core functionality is implemented in `garch_optimizer.py`.
+- **`tests/`**: Includes unit tests to verify the correctness of the optimizer. The `test_garch_optimizer.py` file contains test cases for the GARCH optimizer.
+- **`Analysis.ipynb`**: A Jupyter notebook demonstrating how the GARCH optimizer works, with examples and visualizations.
+- **`setup.py`**: Handles the packaging and installation of the project, specifying dependencies and metadata.
+- **`requirements.txt`**: Lists the required Python packages needed to run the project.
+- **`LICENSE`**: The license under which the project is released.
+- **`README.md`**: The main documentation file providing an overview of the project, installation instructions, and usage examples.
 
 ## Installation
 
