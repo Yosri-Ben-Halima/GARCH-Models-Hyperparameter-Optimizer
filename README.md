@@ -2,6 +2,28 @@
 
 This project provides a GARCH hyperparameter grid search optimizer using Optuna.
 
+## Project Structure
+
+```bash
+GARCH-Models-Hyperparameter-Optimizer/
+│
+├── garch_optimizer/
+│   ├── __init__.py
+│   └── garch_optimizer.py
+│
+├── tests/
+│   ├── __init__.py
+│   └── test_garch_optimizer.py
+│
+├── Analysis.ipynb  # Jupyter notebook
+│
+├── setup.py
+├── requirements.txt
+├── LICENSE
+└── README.md
+
+```
+
 ## Installation
 
 Ensure you have the necessary packages installed. You can install them using pip:
