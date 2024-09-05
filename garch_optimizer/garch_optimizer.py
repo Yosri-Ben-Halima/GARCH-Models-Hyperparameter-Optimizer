@@ -8,7 +8,6 @@ from sklearn.metrics import mean_absolute_percentage_error
 from sklearn.exceptions import ConvergenceWarning
 from scipy.linalg import LinAlgError
 import warnings
-from typing import Literal, Optional
 
 def garch_parameter(data: pd.Series, max_p: int, max_q: int, max_o: int=0, max_lag: int=0, vol: str=None, n_trials: int=200, x=None) -> dict:
     """
@@ -47,6 +46,7 @@ def garch_parameter(data: pd.Series, max_p: int, max_q: int, max_o: int=0, max_l
     - `RuntimeWarning`: If a RuntimeWarning occurs during the optimization process.
     - `ConvergenceWarning`: If a ConvergenceWarning occurs during the optimization process.
     """
+
     def objective(trial):
         """
         Objective function for Optuna optimization. 
@@ -119,9 +119,6 @@ def garch_parameter(data: pd.Series, max_p: int, max_q: int, max_o: int=0, max_l
         best_params['vol_model'] = vol
 
     best_score = study.best_value
-
-    print("Best Parameters:", best_params)
-    print("Best Score:", best_score)
 
     elapsed_time = time.time() - start_time
     print(f"Elapsed Time: {int(elapsed_time // 3600):02}:{int((elapsed_time % 3600) // 60):02}:{elapsed_time % 60:05.2f}")
